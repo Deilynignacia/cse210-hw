@@ -6,10 +6,24 @@ class Program
     {
         Welcome();
         string userName = UserName();
-        int userNumber = UserNumber();
-        int squaredNumber = SquareNumber(userNumber);
+        bool continueProgram = true;
+        while (continueProgram)
+        {
+            int userNumber = UserNumber();
+            int squaredNumber = SquareNumber(userNumber);
 
-        Result(userName, squaredNumber);
+            Result(userName, squaredNumber);
+
+            Console.Write("Would you like to try a different number? (yes/no)");
+            string answer = Console.ReadLine().ToLower();
+
+            if (answer != "yes")
+            {
+                continueProgram = false;
+                Console.WriteLine("See you!");
+            }
+            Console.WriteLine();
+        }
     }
     static void Welcome()
     {
@@ -17,14 +31,14 @@ class Program
     }
     static string UserName()
     {
-        Console.Write("I am really glad you came! What is your name? ");
+        Console.Write("I am really glad you came by! What is your name? ");
         string name = Console.ReadLine();
 
         return name;
     }
     static int UserNumber()
     {
-        Console.Write("That is a beautiful name! What is your favorite number? ");
+        Console.Write("Now, choose a number. ");
         int number = int.Parse(Console.ReadLine());
 
         return number;
@@ -36,6 +50,6 @@ class Program
     }
     static void Result(string name, int square)
     {
-        Console.WriteLine($"Dear {name}, the square of your number is {square}");
+        Console.WriteLine($"Dear {name}, the square of your number is {square}.");
     }
 }
