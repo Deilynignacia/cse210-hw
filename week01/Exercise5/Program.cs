@@ -4,14 +4,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        WelcomeMessage();
+        Welcome();
         string userName = UserName();
         int userNumber = UserNumber();
         int squaredNumber = SquareNumber(userNumber);
 
         Result(userName, squaredNumber);
     }
-    static void WelcomeMessage()
+    static void Welcome()
     {
         Console.WriteLine("Welcome to the program, my friend!");
     }
