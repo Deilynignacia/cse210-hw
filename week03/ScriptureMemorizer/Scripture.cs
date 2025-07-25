@@ -14,8 +14,8 @@ public class Scripture
         _words = new List<Word>();
         _randomGenerator = new Random();
 
-        string[] individualWords = text.Split(new char[] { ' ', ',', '.', ';', ':', '!', '?', '(',
-        ')', '[', ']', '{', '}', '-', '—', '“', '”', '‘', '’', '"', '\'' }, StringSplitOptions.RemoveEmptyEntries);
+        // Fix the puntuation error
+        string[] individualWords = text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
         foreach (string individualWord in individualWords)
         {
