@@ -18,6 +18,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Add colors
         Console.ForegroundColor = ConsoleColor.Cyan;
         Console.WriteLine();
         Console.WriteLine("WELCOME TO THE SCRIPTURE MEMORIZER!");
