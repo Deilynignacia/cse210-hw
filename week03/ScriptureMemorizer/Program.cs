@@ -37,7 +37,7 @@ class Program
 
         string userInput = "";
 
-        // Start cronometer
+        // Start
         Stopwatch stopwatch = new Stopwatch();
         stopwatch.Start();
 
