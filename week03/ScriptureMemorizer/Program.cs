@@ -56,6 +56,7 @@ class Program
 
             Console.WriteLine("--------------------");
 
+            // Add colors
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Write("Press Enter to hide words and start the game, or type 'quit' to exit: ");
             userInput = Console.ReadLine();
@@ -85,6 +86,7 @@ class Program
         }
         
         Console.WriteLine();
+        // Add colors
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine("See you next time!");
         Console.WriteLine();
