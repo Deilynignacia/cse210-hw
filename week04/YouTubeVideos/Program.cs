@@ -43,7 +43,6 @@ class Program
             {
                 Console.WriteLine($"{comment.GetCommenter()}: \"{comment.GetText()}\"");
             }
-            Console.WriteLine();
         }
         Console.WriteLine("----------------------------------"); // Separator
     }
