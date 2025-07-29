@@ -1,17 +1,17 @@
 public class Customer
 {
     private string _name;
-    private Adress _adress;
+    private Address _address;
 
-    public Customer(string name, Adress adress)
+    public Customer(string name, Address address)
     {
         _name = name;
-        _adress = adress;
+        _address = address;
     }
 
     public bool IsInUSA()
     {
-        return _adress.USA();
+        return _address.USA();
     }
 
     public string GetName()
@@ -19,8 +19,8 @@ public class Customer
         return _name;
     }
 
-    public Adress GetAdress()
+    public Address GetAddress()
     {
-        return _adress;
+        return _address;
     }
 }
