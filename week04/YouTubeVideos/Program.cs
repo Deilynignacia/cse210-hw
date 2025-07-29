@@ -9,7 +9,6 @@ class Program
 
         Console.WriteLine();
         Console.WriteLine("YOUTUBE VIDEO PROGRAM");
-        Console.WriteLine();
 
         // Videos
         Video video1 = new Video("Alex Warren", "Eternity", 204);
@@ -38,7 +37,6 @@ class Program
             Console.WriteLine($"Author: {video.GetAuthor()}");
             Console.WriteLine($"Length: {video.GetLength()} seconds");
             Console.WriteLine($"Number of Comments: {video.NumberOfComments()}");
-            Console.WriteLine();
             Console.WriteLine("COMMENTS:");
 
             foreach (Comment comment in video.GetComments())
