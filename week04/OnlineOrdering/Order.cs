@@ -40,7 +40,7 @@ public class Order
 
     public string GetPackingLabel()
     {
-        string label = "Packing Label:\n";
+        string label = "PACKING LABEL\n";
 
         foreach (Product product in _productList)
         {
@@ -55,9 +55,9 @@ public class Order
         string customerName = _customer.GetName();
         string customerAddress = _customer.GetAddress().GetAddress();
 
-        string label = "Shipping Label:\n";
+        string label = "SHIPPING LABEL\n";
         label += $"Customer: {customerName}\n";
-        label += $"Address:\n{customerAddress}";
+        label += $"Address: {customerAddress}";
 
         return label;
     }
