@@ -1,10 +1,13 @@
 using System;
+using System.Threading;
 
 class Program
 {
     static void Main(string[] args)
     {
-        while (true)
+        int numberOfCompletedActivities = 0;
+
+            while (true)
         {
             Console.Clear();
             Console.WriteLine("Menu Options:");
@@ -13,34 +16,39 @@ class Program
             Console.WriteLine("  3. Start listing activity");
             Console.WriteLine("  4. Quit");
             Console.Write("Select a choice from the menu: ");
-            
+
             string choice = Console.ReadLine();
 
             if (choice == "1")
             {
                 Breathing breathingActivity = new Breathing();
                 breathingActivity.RunActivity();
+                numberOfCompletedActivities++;
             }
 
             else if (choice == "2")
             {
                 Reflection reflectionActivity = new Reflection();
                 reflectionActivity.RunActivity();
+                numberOfCompletedActivities++;
             }
 
             else if (choice == "3")
             {
                 Listing listingsActivity = new Listing();
                 listingsActivity.RunActivity();
+                numberOfCompletedActivities++;
             }
             else if (choice == "4")
             {
                 Console.WriteLine("You can come back whenever you feel you need a breack.");
+                Thread.Sleep(2000);
                 break;
             }
             else
             {
                 Console.WriteLine("That is not an option. Please try again.");
+                Thread.Sleep(2000);
             }
         }
     }
