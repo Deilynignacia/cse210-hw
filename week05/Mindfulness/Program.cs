@@ -1,3 +1,4 @@
+// In order to show creativity, I added a counter to track the number of completed activities during a session.
 using System;
 using System.Threading;
 
