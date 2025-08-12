@@ -2,9 +2,9 @@ using System.Security.Cryptography;
 
 public abstract class Goal
 {
-    private string _name;
-    private string _description;
-    private int _points;
+    public string _name;
+    public string _description;
+    public int _points;
 
     public Goal(string name, string description, int points)
     {
@@ -29,10 +29,7 @@ public abstract class Goal
     }
     public abstract int RecordEvent();
 
-    public virtual string ToFileString()
-    {
-        return $"{_name},{_description},{_points}";
-    }
+    public abstract string ToFileString();
     
     public abstract bool IsComplete();
 }

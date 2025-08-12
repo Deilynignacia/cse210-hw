@@ -20,6 +20,6 @@ public class EternalGoal : Goal
     }
     public override string ToFileString()
     {
-        return $"EternalGoal:{base.ToFileString()}";
+        return $"EternalGoal:{_name}|{_description}|{_points}";
     }
 }

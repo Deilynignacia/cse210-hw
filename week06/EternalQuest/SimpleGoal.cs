@@ -29,6 +29,6 @@ public class SimpleGoal : Goal
 
     public override string ToFileString()
     {
-        return $"SimpleGoal:{base.ToFileString()},{_isComplete}";
+        return $"SimpleGoal:{_name}|{_description}|{_points}|{_isComplete}";
     }
 }

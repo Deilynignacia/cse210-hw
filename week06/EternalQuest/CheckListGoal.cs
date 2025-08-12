@@ -49,6 +49,6 @@ public class CheckListGoal : Goal
 
     public override string ToFileString()
     {
-        return $"CheckListGoal:{base.ToFileString()},{_timesDone},{_timesRequired},{_bonus}";
+        return $"ChecklistGoal:{_name}|{_description}|{_points}|{_timesDone}|{_timesRequired}|{_bonus}";
     }
 }
