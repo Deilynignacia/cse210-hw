@@ -14,21 +14,21 @@ public class GoalManager
         _totalScore = 0;
 
         Console.Write("Hail there!");
-        Console.Write("Allow me to introduce myself. My name is Antay and I come from a legacy of Chroniclers of Destiny.");
-        Console.Write("As well as those who came before me, I have witnessed and record countless of bold souls's");
-        Console.Write("extraordinary quests. However, my dear, there is something in your kind spirit that have");
+        Console.Write("Allow me to introduce myself. My name is Antay and I come from a legacy of Chroniclers of Destiny. ");
+        Console.Write("As well as those who came before me, I have witnessed and record countless of bold souls's ");
+        Console.Write("extraordinary quests. However, my dear, there is something in your kind spirit that have ");
         Console.Write("caught my attention, and it would be my pleasure to be yours the next story in my scrolls.");
-        Console.Write("");
+        Console.WriteLine("");
         Console.Write("What is your name?");
-
+        
         _userName = Console.ReadLine();
 
         Console.WriteLine($"\nBe welcome then, {_userName}.");
-        Console.Write("");
-        Console.Write("As you might know, almost every great story begins at the foot of the mountain,");
-        Console.Write("and so does yours. You will start your journey as my Apprentice. But I must instruct you to");
-        Console.Write("not be content with your current state. It is your sacred duty to rise above.");
-        Console.Write("Now, listen to my words. This is the path awaiting for you: Create and complete quests, earn stars");
+        Console.WriteLine("");
+        Console.Write("As you might know, almost every great story begins at the foot of the mountain, ");
+        Console.Write("and so does yours. You will start your journey as my Apprentice. But I must instruct you to ");
+        Console.Write("not be content with your current state. It is your sacred duty to rise above. ");
+        Console.Write("Now, listen to my words. This is the path awaiting for you: Create and complete quests, earn stars ");
         Console.Write("and level up from Apprentice to The Chronicler's Chosen.");
     }
 
@@ -39,7 +39,6 @@ public class GoalManager
         do
         {
             Console.WriteLine($"\n▣ {_userName} the {GetTitle()} ▣");
-            
             Console.WriteLine($"Total Stars: {_totalScore} ★");
 
             Console.WriteLine("\nWhat do you want to do?");
@@ -49,44 +48,47 @@ public class GoalManager
             Console.WriteLine(" 4. Look at Old Quests (Load)");
             Console.WriteLine(" 5. Mark a Quest as Done");
             Console.WriteLine(" 6. Quit");
-
             Console.Write("Choose wisely: ");
 
             choice = Console.ReadLine();
 
             if (choice == "1")
             {
+                CreateGoal();
             }
-
             else if (choice == "2")
             {
+                ListGoals();
             }
-
             else if (choice == "3")
             {
+                SaveGoals();
             }
-
             else if (choice == "4")
             {
+                LoadGoals();
             }
-
             else if (choice == "5")
             {
+                RecordEvent();
             }
-
             else if (choice == "6")
             {
                 Console.WriteLine($"\nFarewell, {_userName} the {GetTitle()}!");
             }
-
             else
             {
                 Console.WriteLine("Try again, my dear.");
             }
 
+            if (choice != "6")
+            {
+                Console.WriteLine("\nPress any key to continue...");
+                Console.ReadKey();
+            }
+
         } while (choice != "6");
     }
-    
     private string GetTitle()
     {
         if (_totalScore >= 10000) return "🧝🏻 The Chronicler's Chosen";
@@ -100,7 +102,6 @@ public class GoalManager
         if (_totalScore >= 50)   return "📜 Scribe";
         return "🪶 Apprentice";
     }
-
     private void CreateGoal()
     {
         Console.WriteLine("\nQuests types:");
